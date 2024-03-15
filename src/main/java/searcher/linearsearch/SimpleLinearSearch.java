@@ -1,6 +1,6 @@
-package searcher;
+package searcher.linearsearch;
 
-public class LinearSearch {
+public class SimpleLinearSearch {
     public static int linearsearch(int[] numbers, int key) {
         for (int index = 0; index < numbers.length; index++) {
             if (numbers[index] == key) {
