@@ -17,21 +17,20 @@ public class StudentLinearSearch {
 
 class Searcher {
     public static void main(String[] args) {
-        StudentLinearSearch[] students = new StudentLinearSearch[]{new StudentLinearSearch(9, "Ram"), new StudentLinearSearch(3, "Akash"), new StudentLinearSearch(1, "Abhishek")};
-
+        StudentLinearSearch[] names = new StudentLinearSearch[]{new StudentLinearSearch(9, "Ram"), new StudentLinearSearch(3, "Akash"), new StudentLinearSearch(1, "Abhishek")};
         int key = 3;
-        int index = search(students, key);
+        int index = search(names, key);
         if (index != -1) {
             System.out.println("Student found at index : " + index);
-            System.out.println("Student details: " + students[index]);
+            System.out.println("Student details: " + names[index]);
         } else {
             System.out.println("Student not found.");
         }
     }
 
-    public static int search(StudentLinearSearch[] students, int key) {
-        for (int index = 0; index < students.length; index++) {
-            if (students[index].rollNumber == key) {
+    public static int search(StudentLinearSearch[] name, int key) {
+        for (int index = 0; index < name.length; index++) {
+            if (name[index].rollNumber == key) {
                 return index;
             }
         }
