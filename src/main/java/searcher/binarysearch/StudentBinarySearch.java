@@ -16,9 +16,9 @@ public class StudentBinarySearch {
 }
 
 class Searcher {
-    public static int search(StudentBinarySearch[] names, int key) {
-        for (int index = 0; index < names.length; index++) {
-            if (names[index].rollNumber == key) {
+    public static int search(StudentBinarySearch[] student, int key) {
+        for (int index = 0; index < student.length; index++) {
+            if (student[index].rollNumber == key) {
                 return index;
             }
         }
@@ -27,7 +27,12 @@ class Searcher {
 
 
     public static void main(String[] args) {
-        StudentBinarySearch[] names = new StudentBinarySearch[]{new StudentBinarySearch(9, "Lala ji"), new StudentBinarySearch(6, "Aman"), new StudentBinarySearch(10, "Abhay"), new StudentBinarySearch(2, "radhe"), new StudentBinarySearch(1, "Abhishek")};
+        StudentBinarySearch[] names = new StudentBinarySearch[]
+                {new StudentBinarySearch(9, "Lala ji"),
+                 new StudentBinarySearch(6, "Aman"),
+                 new StudentBinarySearch(10, "Abhay"),
+                 new StudentBinarySearch(2, "radhe"),
+                 new StudentBinarySearch(1, "Abhishek")};
         int key = 10;
         int index = search(names, key);
         if (index != -1) {
